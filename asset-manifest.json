@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/app_nuzlocke_tracker/static/css/main.e89348da.css",
+    "main.js": "/app_nuzlocke_tracker/static/js/main.775bae31.js",
+    "static/js/488.0a193fb0.chunk.js": "/app_nuzlocke_tracker/static/js/488.0a193fb0.chunk.js",
+    "index.html": "/app_nuzlocke_tracker/index.html",
+    "main.e89348da.css.map": "/app_nuzlocke_tracker/static/css/main.e89348da.css.map",
+    "main.775bae31.js.map": "/app_nuzlocke_tracker/static/js/main.775bae31.js.map",
+    "488.0a193fb0.chunk.js.map": "/app_nuzlocke_tracker/static/js/488.0a193fb0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e89348da.css",
+    "static/js/main.775bae31.js"
+  ]
+}
