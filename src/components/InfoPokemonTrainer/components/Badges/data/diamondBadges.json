@@ -1,0 +1,60 @@
+{
+  "badges": [
+    {
+      "id": 1,
+      "name": "Coal Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0c/latest/20230519142959/Medalla_Lignito_DBPR.png/80px-Medalla_Lignito_DBPR.png",
+      "gym": "Pirita",
+      "obtained": false
+    },
+    {
+      "id": 2,
+      "name": "Forest Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4b/latest/20230519143000/Medalla_Bosque_DBPR.png/80px-Medalla_Bosque_DBPR.png",
+      "gym": "Vetusta",
+      "obtained": false
+    },
+    {
+      "id": 3,
+      "name": "Cobble Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a5/latest/20090913184422/Medalla_Adoqu%C3%ADn.png/70px-Medalla_Adoqu%C3%ADn.png",
+      "gym": "Rocavelo",
+      "obtained": false
+    },
+    {
+      "id": 4,
+      "name": "Fen Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/73/latest/20090913184439/Medalla_Ci%C3%A9naga.png/70px-Medalla_Ci%C3%A9naga.png",
+      "gym": "Pradera",
+      "obtained": false
+    },
+    {
+      "id": 5,
+      "name": "Relic Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e2/latest/20090913184435/Medalla_Reliquia.png/70px-Medalla_Reliquia.png",
+      "gym": "Corazón",
+      "obtained": false
+    },
+    {
+      "id": 6,
+      "name": "Mine Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4b/latest/20230519143004/Medalla_Mina_DBPR.png/80px-Medalla_Mina_DBPR.png",
+      "gym": "Canal",
+      "obtained": false
+    },
+    {
+      "id": 7,
+      "name": "Icicle Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/23/latest/20230519143329/Medalla_Car%C3%A1mbano_DBPR.png/80px-Medalla_Car%C3%A1mbano_DBPR.png",
+      "gym": "Puntaneva",
+      "obtained": false
+    },
+    {
+      "id": 8,
+      "name": "Beacon Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/4b/latest/20230519143006/Medalla_Faro_DBPR.png/80px-Medalla_Faro_DBPR.png",
+      "gym": "Marina",
+      "obtained": false
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem; /* 32PX */
+}
+
+h2 {
+  font-size: 1.25rem; /* 20PX */
+}
+
+h3 {
+  font-size: 1rem; /* 16PX */
+}
+
+p {
+  font-size: 0.875rem; /* 14PX */
+}
+
+.App {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  font-family: "Pixelify Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 10px;
+}
+
+input {
+  font-family: "Pixelify Sans", sans-serif;
+  min-height: 25px;
+  width: 98%;
+}
+
+select {
+  font-family: "Pixelify Sans", sans-serif;
+  min-height: 25px;
+  width: 100%;
+}
+
+button {
+  background-color: #9c3333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.textUpper {
+  text-transform: uppercase;
+}
+
+.headerTitleHome {
+  align-items: center;
+  background-color: #9c3333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.headerTitle {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* FORM TRAINER */
+.formUserTrainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.headerInfoTrainer {
+  align-items: stretch;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* ADD POKEMON */
+.searchPokemon {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pokemonDisplay img {
+  height: 120px;
+  padding: 10px;
+  width: 120px;
+}
+
+.pokemonInfo {
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.buttonsAdd {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* INFO TRAINER */
+.infoNameTrainer {
+  background-color: #9c3333;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.pokemonList {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.pokemonContainer {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.pokemonContainerImg {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.pokemonContainerImg::before {
+  content: "";
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2764%27%20height%3D%2764%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27currentColor%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20stroke%3D%27none%27%20d%3D%27M0%200h24v24H0z%27%20fill%3D%27none%27%2F%3E%3Cpath%20d%3D%27M12%2012m-9%200a9%209%200%201%200%2018%200a9%209%200%201%200%20-18%200%27%2F%3E%3Cpath%20d%3D%27M12%2012m-3%200a3%203%200%201%200%206%200a3%203%200%201%200%20-6%200%27%2F%3E%3Cpath%20d%3D%27M3%2012h6%27%2F%3E%3Cpath%20d%3D%27M15%2012h6%27%2F%3E%3C%2Fsvg%3E");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.pokemonContainerImg img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.graveyardContainerImg {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.graveyardContainerImg::before {
+  content: "";
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg%20%20xmlns=%22http://www.w3.org/2000/svg%22%20%20width=%2224%22%20%20height=%2224%22%20%20viewBox=%220%200%2024%2024%22%20%20fill=%22none%22%20%20stroke=%22currentColor%22%20%20stroke-width=%222%22%20%20stroke-linecap=%22round%22%20%20stroke-linejoin=%22round%22%20%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-grave-2%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22/%3E%3Cpath%20d=%22M7%2016.17v-9.17a3%203%200%200%201%203%20-3h4a3%203%200%200%201%203%203v9.171%22%20/%3E%3Cpath%20d=%22M12%207v5%22%20/%3E%3Cpath%20d=%22M10%209h4%22%20/%3E%3Cpath%20d=%22M5%2021v-2a3%203%200%200%201%203%20-3h8a3%203%200%200%201%203%203v2h-14z%22%20/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.graveyardContainerImg img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.pcContainerImg {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.pcContainerImg::before {
+  content: "";
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg%20%20xmlns=%22http://www.w3.org/2000/svg%22%20%20width=%2224%22%20%20height=%2224%22%20%20viewBox=%220%200%2024%2024%22%20%20fill=%22none%22%20%20stroke=%22currentColor%22%20%20stroke-width=%222%22%20%20stroke-linecap=%22round%22%20%20stroke-linejoin=%22round%22%20%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-device-imac%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22/%3E%3Cpath%20d=%22M3%204a1%201%200%200%201%201%20-1h16a1%201%200%200%201%201%201v12a1%201%200%200%201%20-1%201h-16a1%201%200%200%201%20-1%20-1v-12z%22%20/%3E%3Cpath%20d=%22M3%2013h18%22%20/%3E%3Cpath%20d=%22M8%2021h8%22%20/%3E%3Cpath%20d=%22M10%2017l-.5%204%22%20/%3E%3Cpath%20d=%22M14%2017l.5%204%22%20/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.pcContainerImg img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.badgesList {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.badgeContainerImg {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.badgeContainerImg img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.imgColor {
+  filter: none;
+}
+
+.ImgSilueta {
+  filter: grayscale(100%) brightness(0.5);
+}
+
+/* LIVES */
+.infoLivesTrainer {
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+}
+
+.livesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+/* LG (1024) */
+@media (width >= 64rem) {
+  .containerHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
