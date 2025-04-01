@@ -51,7 +51,7 @@ const GridPokemons = ({ searchPokemon, onSelectPokemon }: Props) => {
 
   return (
     <div>
-      <div className="grid">
+      <div className="gridPokemons">
         {paginatedPokemons.map((pokemon) => (
           <div key={pokemon.name}>
             <CardPokemon

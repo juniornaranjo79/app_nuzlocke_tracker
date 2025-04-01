@@ -129,6 +129,13 @@ button {
   padding: 10px;
 }
 
+.gridPokemons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+}
+
 /* INFO TRAINER */
 .infoNameTrainer {
   background-color: #9c3333;
