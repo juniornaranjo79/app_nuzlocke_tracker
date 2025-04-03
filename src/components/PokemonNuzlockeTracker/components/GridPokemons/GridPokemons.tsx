@@ -55,23 +55,22 @@ const GridPokemons = ({ searchPokemon, onSelectPokemon }: Props) => {
         {paginatedPokemons.map((pokemon) => (
           <div key={pokemon.name}>
             <CardPokemon
-              name={pokemon.name}
-              sprite={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url
+              url={pokemon.url}
+              /* sprite={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url
                 .split("/")
-                .slice(-2, -1)}.png`}
-              types={[]}
-              addTeam={() => onSelectPokemon(pokemon)}
-              addPc={() => onSelectPokemon(pokemon)}
+                .slice(-2, -1)}.png`} */
             />
           </div>
         ))}
       </div>
-      <Pagination
-        currentPage={currentPage}
-        totalItems={filteredPokemon.length}
-        itemsPerPage={limit}
-        onPageChange={setCurrentPage}
-      />
+      <div className="pagination">
+        <Pagination
+          currentPage={currentPage}
+          totalItems={filteredPokemon.length}
+          itemsPerPage={limit}
+          onPageChange={setCurrentPage}
+        />
+      </div>
     </div>
   );
 };

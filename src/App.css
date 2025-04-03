@@ -136,6 +136,14 @@ button {
   justify-items: center;
 }
 
+.pagination {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
 /* INFO TRAINER */
 .infoNameTrainer {
   background-color: #9c3333;

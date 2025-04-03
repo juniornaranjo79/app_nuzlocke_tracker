@@ -1,20 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface Props {
-  name: string;
-  sprite: string;
-  types: Array<object>;
-  addTeam: () => void;
-  addPc: () => void;
+  url: string;
 }
 
-const CardPokemon = ({ name, sprite, types, addTeam, addPc }: Props) => {
+const CardPokemon = ({ url }: Props) => {
+  console.log("url", url);
+  const [pokemon, setPokemon] = useState<{
+    name: string;
+    sprite: string;
+    types: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const fetchPokemonData = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("data", data);
+        setPokemon({
+          name: data.name,
+          sprite: data.sprites.other["official-artwork"].front_default,
+          types: data.types
+            .map((types: { type: { name: string } }) => types.type.name)
+            .join(", "),
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchPokemonData();
+  }, [url]);
+
+  if (!pokemon) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="pokemonDisplay">
       <div className="pokemonInfo">
-        <img src={sprite} alt={name} />
-        <p>NOMBRE: {name}</p>
-        <p>TIPO: {types}</p>
+        <img src={pokemon.sprite} alt={pokemon.name} />
+        <p>NOMBRE: {pokemon.name}</p>
+        <p>TIPO: {pokemon.types}</p>
       </div>
       {/* <div className="buttonsAdd">
         <button
