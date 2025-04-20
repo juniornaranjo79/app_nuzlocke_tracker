@@ -1,0 +1,60 @@
+{
+  "badges": [
+    {
+      "id": 1,
+      "name": "Bug Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/9/97/latest/20180306045539/Medalla_Insecto.png/70px-Medalla_Insecto.png",
+      "gym": "Novarte",
+      "obtained": false
+    },
+    {
+      "id": 2,
+      "name": "Cliff Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b2/latest/20180306045920/Medalla_Muro.png/70px-Medalla_Muro.png",
+      "gym": "Relieve",
+      "obtained": false
+    },
+    {
+      "id": 3,
+      "name": "Rumble Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/6/65/latest/20180306050018/Medalla_Lid.png/70px-Medalla_Lid.png",
+      "gym": "Yantra",
+      "obtained": false
+    },
+    {
+      "id": 4,
+      "name": "Plant Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/76/latest/20180306050104/Medalla_Hoja.png/70px-Medalla_Hoja.png",
+      "gym": "Témpera",
+      "obtained": false
+    },
+    {
+      "id": 5,
+      "name": "Voltage Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/ca/latest/20180306050140/Medalla_Voltaje.png/70px-Medalla_Voltaje.png",
+      "gym": "Luminalia",
+      "obtained": false
+    },
+    {
+      "id": 6,
+      "name": "Fairy Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/ef/latest/20180306050231/Medalla_Hada.png/70px-Medalla_Hada.png",
+      "gym": "Romantis",
+      "obtained": false
+    },
+    {
+      "id": 7,
+      "name": "Psychic Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/0a/latest/20180306050326/Medalla_Psique.png/70px-Medalla_Psique.png",
+      "gym": "Fluxus",
+      "obtained": false
+    },
+    {
+      "id": 8,
+      "name": "Iceberg Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/73/latest/20180306045259/Medalla_Iceberg.png/70px-Medalla_Iceberg.png",
+      "gym": "Fractal",
+      "obtained": false
+    }
+  ]
+}

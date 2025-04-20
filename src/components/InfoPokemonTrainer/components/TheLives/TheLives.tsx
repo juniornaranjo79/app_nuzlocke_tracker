@@ -8,9 +8,13 @@ interface Live {
 }
 
 const TheLives = ({ livesArray = [] }: { livesArray: Live[] }) => {
+  const lives = livesArray.filter((live) => live.state).length;
   return (
     <div className="infoLivesTrainer">
-      <p>VIDAS:</p>
+      <div>
+        <p>VIDAS:</p>
+        <h2>{lives}</h2>
+      </div>
       <div className="livesContainer">
         {livesArray.map((live) =>
           live.state ? (

@@ -9,7 +9,7 @@ interface Pokemon {
 
 interface PartyProps {
   party: Pokemon[];
-  movePokemon: (pokemon: Pokemon, from: string, to: string) => void;
+  movePokemon: (from: string, to: string, pokemon: Pokemon) => void;
   evolvePokemon: (pokemon: Pokemon) => void;
 }
 
@@ -27,10 +27,10 @@ const TheParty = ({ party, movePokemon, evolvePokemon }: PartyProps) => {
             </div>
             <div>
               <IconGrave
-                onClick={() => movePokemon(pokemon, "party", "graveyard")}
+                onClick={() => movePokemon("party", "graveyard", pokemon)}
               />
               <IconDeviceImac
-                onClick={() => movePokemon(pokemon, "party", "pc")}
+                onClick={() => movePokemon("party", "pc", pokemon)}
               />
             </div>
             <button onClick={() => evolvePokemon(pokemon)}>Evolucionar</button>

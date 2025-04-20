@@ -11,7 +11,7 @@ const GridPokemons = ({ searchPokemon }: Props) => {
   const [pokemonList, setPokemonList] = useState<Result[]>([]);
   const [filteredPokemon, setFilteredPokemon] = useState<Result[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const limit = 20;
+  const limit = 9;
 
   useEffect(() => {
     const fetchPokemons = async () => {

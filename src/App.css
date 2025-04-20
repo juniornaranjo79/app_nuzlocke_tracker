@@ -63,6 +63,11 @@ button {
   text-transform: uppercase;
 }
 
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .textUpper {
   text-transform: uppercase;
 }
@@ -72,8 +77,14 @@ button {
   background-color: #9c3333;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 10px;
+}
+
+.headerTitleHome .title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .headerTitle {
@@ -110,14 +121,14 @@ button {
 }
 
 .pokemonDisplay img {
-  height: 120px;
-  padding: 10px;
-  width: 120px;
+  height: 110px;
+  padding: 0 0 5px;
+  width: 110px;
 }
 
 .pokemonInfo {
   text-align: center;
-  padding: 10px;
+  padding: 0 0 5px;
   text-transform: uppercase;
 }
 
@@ -291,6 +302,11 @@ button {
   display: flex;
   gap: 5px;
   padding: 10px;
+}
+
+.infoLivesTrainer h2 {
+  font-size: 28px;
+  text-align: center;
 }
 
 .livesContainer {

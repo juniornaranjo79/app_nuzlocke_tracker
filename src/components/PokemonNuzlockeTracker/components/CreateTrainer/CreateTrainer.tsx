@@ -43,10 +43,10 @@ const CreateTrainer = ({ setShowCreateTrainer }) => {
           onChange={(e) => setGameVersion(e.target.value)}
         >
           <option value="selectGame">Seleccionar juego</option>
-          <option value="brilliantDiamond">Diamante brillante</option>
-          <option value="shiningPearl">Perla reluciente</option>
-          <option value="violet">Púrpura</option>
-          <option value="scarlet">Escarlata</option>
+          <option value="rubySapphire">Rubí y Zafiro</option>
+          <option value="diamondPearl">Diamante y Perla</option>
+          <option value="xY">Pokemon XY</option>
+          <option value="violetScarlet">Púrpura y Escarlata</option>
         </select>
         <button
           onClick={(e) => {

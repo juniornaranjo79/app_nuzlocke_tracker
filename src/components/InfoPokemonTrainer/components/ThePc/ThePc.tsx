@@ -1,5 +1,4 @@
 import React from "react";
-import { IconPokeball, IconPokeballOff } from "@tabler/icons-react";
 
 interface Pokemon {
   id: number;
@@ -9,7 +8,7 @@ interface Pokemon {
 
 interface PartyProps {
   pc: Pokemon[];
-  movePokemon: (pokemon: Pokemon, from: string, to: string) => void;
+  movePokemon: (from: string, to: string, pokemon: Pokemon) => void;
   disabled: number;
 }
 
@@ -28,11 +27,10 @@ const ThePc = ({ pc, movePokemon, disabled }: PartyProps) => {
             <div>
               <button
                 disabled={disabled >= 6}
-                onClick={() => movePokemon(pokemon, "pc", "party")}
+                onClick={() => movePokemon("pc", "party", pokemon)}
               >
                 MOVER A EQUIPO
               </button>
-              {/* {disabled >= 6 ? <IconPokeballOff /> : <IconPokeball />} */}
             </div>
           </div>
         ))}

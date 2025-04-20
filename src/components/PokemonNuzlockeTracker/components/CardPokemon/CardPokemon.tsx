@@ -6,8 +6,7 @@ interface Props {
 }
 
 const CardPokemon = ({ url }: Props) => {
-  const { addPokemonTo } = useTracker();
-  console.log("url", url);
+  const { trainerData, addPokemonTo } = useTracker();
   const [pokemon, setPokemon] = useState<{
     id: number;
     name: string;
@@ -15,7 +14,6 @@ const CardPokemon = ({ url }: Props) => {
     types: string;
   } | null>(null);
 
-  console.log("pokemon", pokemon);
   useEffect(() => {
     const fetchPokemonData = async () => {
       try {
@@ -51,14 +49,12 @@ const CardPokemon = ({ url }: Props) => {
       </div>
       <div className="buttonsAdd">
         <button
-          /* disabled={storedData.party.length >= 6} */
+          disabled={trainerData.party.length >= 6}
           onClick={() => addPokemonTo("party", pokemon)}
         >
-          Añadir al equipo
+          Equipo
         </button>
-        <button onClick={() => addPokemonTo("pc", pokemon)}>
-          Añadir al PC
-        </button>
+        <button onClick={() => addPokemonTo("pc", pokemon)}>PC</button>
       </div>
     </div>
   );

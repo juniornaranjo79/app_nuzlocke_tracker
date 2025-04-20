@@ -25,6 +25,7 @@ export interface TrainerData {
   party: Pokemon[];
   pc: Pokemon[];
   graveyard: Pokemon[];
+  livesArray: { id: number; state: boolean }[];
 }
 
 export interface TrakerContextType {
