@@ -53,7 +53,7 @@ const InfoPokemonTrainer = () => {
       window.removeEventListener("trainerDataUpdated", loadTrainerData);
   }, []);
 
-  const movePokemon = (pokemon, from, to) => {
+  /* const movePokemon = (pokemon, from, to) => {
     const updatedFrom =
       trainerData[from]?.filter((p) => p.id !== pokemon.id) || [];
     const updatedTo = [...(trainerData[to] || []), pokemon];
@@ -83,7 +83,7 @@ const InfoPokemonTrainer = () => {
     }
     localStorage.setItem("nuzlockeTracker", JSON.stringify(updatedData));
     window.dispatchEvent(new Event("trainerDataUpdated"));
-  };
+  }; */
 
   const fetchEvolution = async (pokemonName) => {
     try {
@@ -163,7 +163,7 @@ const InfoPokemonTrainer = () => {
       <div>
         <TheParty
           party={trainerData.party}
-          movePokemon={movePokemon}
+          /* movePokemon={movePokemon} */
           evolvePokemon={evolvePokemon}
         />
       </div>
@@ -173,7 +173,7 @@ const InfoPokemonTrainer = () => {
       <div>
         <ThePc
           pc={trainerData.pc}
-          movePokemon={movePokemon}
+          /* movePokemon={movePokemon} */
           disabled={trainerData.party.length}
         />
       </div>

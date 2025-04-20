@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useTracker } from "../../../../hooks/useTracker.tsx";
 
 interface Props {
   url: string;
 }
 
 const CardPokemon = ({ url }: Props) => {
+  const { addPokemonTo } = useTracker();
   console.log("url", url);
   const [pokemon, setPokemon] = useState<{
+    id: number;
     name: string;
     sprite: string;
     types: string;
   } | null>(null);
 
+  console.log("pokemon", pokemon);
   useEffect(() => {
     const fetchPokemonData = async () => {
       try {
@@ -19,6 +23,7 @@ const CardPokemon = ({ url }: Props) => {
         const data = await response.json();
         console.log("data", data);
         setPokemon({
+          id: data.id,
           name: data.name,
           sprite: data.sprites.other["official-artwork"].front_default,
           types: data.types
@@ -44,15 +49,17 @@ const CardPokemon = ({ url }: Props) => {
         <p>NOMBRE: {pokemon.name}</p>
         <p>TIPO: {pokemon.types}</p>
       </div>
-      {/* <div className="buttonsAdd">
+      <div className="buttonsAdd">
         <button
-          disabled={storedData.party.length >= 6}
-          onClick={() => addTeam("party")}
+          /* disabled={storedData.party.length >= 6} */
+          onClick={() => addPokemonTo("party", pokemon)}
         >
           Añadir al equipo
         </button>
-        <button onClick={() => addPc("pc")}>Añadir al PC</button>
-      </div> */}
+        <button onClick={() => addPokemonTo("pc", pokemon)}>
+          Añadir al PC
+        </button>
+      </div>
     </div>
   );
 };

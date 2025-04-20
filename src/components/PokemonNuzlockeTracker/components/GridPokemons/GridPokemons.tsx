@@ -5,10 +5,9 @@ import Pagination from "../../../Pagination/Pagination.tsx";
 
 interface Props {
   searchPokemon: string;
-  onSelectPokemon: (pokemon: Result) => void;
 }
 
-const GridPokemons = ({ searchPokemon, onSelectPokemon }: Props) => {
+const GridPokemons = ({ searchPokemon }: Props) => {
   const [pokemonList, setPokemonList] = useState<Result[]>([]);
   const [filteredPokemon, setFilteredPokemon] = useState<Result[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
