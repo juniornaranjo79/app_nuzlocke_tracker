@@ -1,0 +1,60 @@
+{
+  "badges": [
+    {
+      "id": 1,
+      "name": "Stone Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/f/ff/latest/20140714195114/Medalla_Piedra.png/70px-Medalla_Piedra.png",
+      "gym": "Férrica",
+      "obtained": false
+    },
+    {
+      "id": 2,
+      "name": "Knuckle Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/85/latest/20140714200249/Medalla_Pu%C3%B1o.png/70px-Medalla_Pu%C3%B1o.png",
+      "gym": "Azuliza",
+      "obtained": false
+    },
+    {
+      "id": 3,
+      "name": "Dynamo Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/1/18/latest/20140714195609/Medalla_Dinamo.png/70px-Medalla_Dinamo.png",
+      "gym": "Malvalona",
+      "obtained": false
+    },
+    {
+      "id": 4,
+      "name": "Heat Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/5c/latest/20140714194523/Medalla_Calor.png/70px-Medalla_Calor.png",
+      "gym": "Lavacalda",
+      "obtained": false
+    },
+    {
+      "id": 5,
+      "name": "Balance Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/e/e7/latest/20140714195342/Medalla_Equilibrio.png/70px-Medalla_Equilibrio.png",
+      "gym": "Petalia",
+      "obtained": false
+    },
+    {
+      "id": 6,
+      "name": "Feather Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/b/b3/latest/20141123204133/Medalla_Pluma.png/70px-Medalla_Pluma.png",
+      "gym": "Arborada",
+      "obtained": false
+    },
+    {
+      "id": 7,
+      "name": "Mind Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a0/latest/20141123204057/Medalla_Mente.png/70px-Medalla_Mente.png",
+      "gym": "Arrecípolis",
+      "obtained": false
+    },
+    {
+      "id": 8,
+      "name": "Rain Badge",
+      "image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/4/47/latest/20141123203757/Medalla_Lluvia.png/70px-Medalla_Lluvia.png",
+      "gym": "Fractal",
+      "obtained": false
+    }
+  ]
+}

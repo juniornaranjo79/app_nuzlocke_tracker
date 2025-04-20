@@ -1,89 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { IconPokeball } from "@tabler/icons-react";
 import TheLives from "./components/TheLives/TheLives.tsx";
 import TheParty from "./components/TheParty/TheParty.tsx";
 import TheGraveyard from "./components/TheGraveyard/TheGraveyard.tsx";
 import ThePc from "./components/ThePc/ThePc.tsx";
 import Badges from "./components/Badges/Badges.tsx";
+import { useTracker } from "../../hooks/useTracker.tsx";
 
 const InfoPokemonTrainer = () => {
-  const [trainerData, setTrainerData] = useState({
-    trainerName: "",
-    lives: 0,
-    gameVersion: "",
-    party: [],
-    pc: [],
-    graveyard: [],
-  });
-
-  useEffect(() => {
-    const loadTrainerData = () => {
-      const storedData =
-        JSON.parse(localStorage.getItem("nuzlockeTracker") || "{}") || {};
-
-      let livesArray = storedData.livesArray;
-      if (!livesArray || livesArray.length === 0) {
-        livesArray = Array.from({ length: storedData.lives || 0 }, (_, i) => ({
-          id: i + 1,
-          state: true,
-        }));
-      }
-
-      setTrainerData({
-        trainerName: storedData.trainerName || "",
-        lives: storedData.lives || 0,
-        gameVersion: storedData.gameVersion || "",
-        party: storedData.party || [],
-        pc: storedData.pc || [],
-        graveyard: storedData.graveyard || [],
-        livesArray: livesArray,
-      });
-
-      if (!storedData.livesArray) {
-        localStorage.setItem(
-          "nuzlockeTracker",
-          JSON.stringify({ ...storedData, livesArray })
-        );
-      }
-    };
-
-    loadTrainerData();
-    window.addEventListener("trainerDataUpdated", loadTrainerData);
-    return () =>
-      window.removeEventListener("trainerDataUpdated", loadTrainerData);
-  }, []);
-
-  const movePokemon = (pokemon, from, to) => {
-    const updatedFrom =
-      trainerData[from]?.filter((p) => p.id !== pokemon.id) || [];
-    const updatedTo = [...(trainerData[to] || []), pokemon];
-
-    const updatedData = {
-      ...trainerData,
-      [from]: updatedFrom,
-      [to]: updatedTo,
-    };
-
-    if (to === "graveyard") {
-      let storedData =
-        JSON.parse(localStorage.getItem("nuzlockeTracker") || "{}") || {};
-      let livesArray =
-        storedData.livesArray ||
-        Array.from({ length: trainerData.lives }, (_, i) => ({
-          id: i + 1,
-          state: true,
-        }));
-
-      const lastAliveIndex = livesArray.map((l) => l.state).lastIndexOf(true);
-      if (lastAliveIndex !== -1) livesArray[lastAliveIndex].state = false;
-
-      updatedData.livesArray = livesArray;
-      localStorage.setItem("nuzlockeTracker", JSON.stringify(updatedData));
-      window.dispatchEvent(new Event("trainerDataUpdated"));
-    }
-    localStorage.setItem("nuzlockeTracker", JSON.stringify(updatedData));
-    window.dispatchEvent(new Event("trainerDataUpdated"));
-  };
+  const { trainerData, setTrainerData, movePokemonTo } = useTracker();
 
   const fetchEvolution = async (pokemonName) => {
     try {
@@ -129,7 +54,7 @@ const InfoPokemonTrainer = () => {
     const evolvedPokemon = {
       ...pokemon,
       name: evolutionData.name,
-      sprite: evolutionData.sprites.other.home.front_default,
+      sprite: evolutionData.sprites.other["official-artwork"].front_default,
     };
 
     // Actualizar la party
@@ -155,15 +80,15 @@ const InfoPokemonTrainer = () => {
       </div>
       <div className="headerInfoTrainer">
         <div className="infoNameTrainer">
-          <h3>ENTRENADOR:</h3>
-          <p className="textUpper">{trainerData.trainerName || "..."}</p>
+          <p>ENTRENADOR:</p>
+          <h2 className="textUpper">{trainerData.trainerName || "..."}</h2>
         </div>
         <TheLives livesArray={trainerData.livesArray} />
       </div>
       <div>
         <TheParty
           party={trainerData.party}
-          movePokemon={movePokemon}
+          movePokemon={movePokemonTo}
           evolvePokemon={evolvePokemon}
         />
       </div>
@@ -173,7 +98,7 @@ const InfoPokemonTrainer = () => {
       <div>
         <ThePc
           pc={trainerData.pc}
-          movePokemon={movePokemon}
+          movePokemon={movePokemonTo}
           disabled={trainerData.party.length}
         />
       </div>

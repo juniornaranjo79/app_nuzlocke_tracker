@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import dataDiamond from "./data/diamondBadges.json";
+import dataDiamondPearl from "./data/diamondPearlBadges.json";
+import dataxY from "./data/xYBadges.json";
+import dataRubySapphire from "./data/rubySapphireBadges.json";
 
 interface Badge {
   id: number;
@@ -25,11 +27,20 @@ const Badges = ({ gameVersion }: GameVersionProps) => {
     let initialBadges: Badge[] = storedData.badges || [];
 
     if (initialBadges.length === 0) {
-      if (
-        savedGameVersion === "brilliantDiamond" ||
-        savedGameVersion === "shiningPearl"
-      ) {
-        initialBadges = dataDiamond.badges.map((badge) => ({
+      if (savedGameVersion === "rubySapphire") {
+        initialBadges = dataRubySapphire.badges.map((badge) => ({
+          ...badge,
+          obtained: false,
+        }));
+      }
+      if (savedGameVersion === "diamondPearl") {
+        initialBadges = dataDiamondPearl.badges.map((badge) => ({
+          ...badge,
+          obtained: false,
+        }));
+      }
+      if (savedGameVersion === "xY") {
+        initialBadges = dataxY.badges.map((badge) => ({
           ...badge,
           obtained: false,
         }));

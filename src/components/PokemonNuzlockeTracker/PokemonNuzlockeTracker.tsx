@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CreateTrainer from "./components/CreateTrainer/CreateTrainer.tsx";
 import AddPokemon from "./components/AddPokemon/AddPokemon.tsx";
+import { useTracker } from "../../hooks/useTracker.tsx";
 
 const PokemonNUzlockeTracker = () => {
-  const [showCreateTrainer, setShowCreateTrainer] = useState(() => {
-    const savedState = localStorage.getItem("createTrainer");
-    return savedState !== null ? JSON.parse(savedState) : true;
-  });
-
-  useEffect(() => {
-    localStorage.setItem("createTrainer", JSON.stringify(showCreateTrainer));
-  }, [showCreateTrainer]);
-
-  /* const clearLocalStorage = () => {
-    localStorage.removeItem("nuzlockeTracker");
-    setTrainerName("");
-    setLives(0);
-    setGameVersion("");
-    setParty([]);
-    setPc([]);
-    setGraveyard([]);
-  }; */
+  const { showCreateTrainer, setShowCreateTrainer } = useTracker();
 
   return (
     <div>

@@ -1,49 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IconCircleDashedPlus } from "@tabler/icons-react";
+import { useTracker } from "../../../../hooks/useTracker.tsx";
 
 const CreateTrainer = ({ setShowCreateTrainer }) => {
-  const [formTrainerName, setFormTrainerName] = useState("");
-  const [formLives, setFormLives] = useState(0);
-  const [formGameVersion, setFormGameVersion] = useState("");
-  const [trainerData, setTrainerData] = useState({
-    trainerName: "",
-    lives: 0,
-    gameVersion: "",
-    party: [],
-    pc: [],
-    graveyard: [],
-  });
+  const { createTrainer } = useTracker();
+  const [name, setName] = useState("");
+  const [lives, setLives] = useState(0);
+  const [gameVersion, setGameVersion] = useState("");
 
-  useEffect(() => {
-    const storeData = JSON.parse(
-      localStorage.getItem("nuzlockeTracker") || "null"
-    );
-    if (storeData) {
-      setTrainerData({
-        trainerName: storeData.trainerName || "",
-        lives: storeData.lives || 0,
-        gameVersion: storeData.gameVersion || "",
-        party: storeData.party || [],
-        pc: storeData.pc || [],
-        graveyard: storeData.graveyard || [],
-      });
-    }
-  }, []);
-
-  const saveToLocalStorage = () => {
-    localStorage.setItem(
-      "nuzlockeTracker",
-      JSON.stringify({
-        ...trainerData,
-        trainerName: formTrainerName,
-        lives: formLives,
-        gameVersion: formGameVersion,
-      })
-    );
-    window.dispatchEvent(new Event("trainerDataUpdated"));
-    setFormTrainerName("");
-    setFormLives(0);
-    setFormGameVersion("Diamante Brillante");
+  const handleSubmit = () => {
+    createTrainer({ trainerName: name, lives, gameVersion });
+    setName("");
+    setLives(0);
+    setGameVersion("Diamante Brillante");
     setShowCreateTrainer(false);
   };
 
@@ -56,30 +25,37 @@ const CreateTrainer = ({ setShowCreateTrainer }) => {
       <div className="formUserTrainer">
         <input
           id="nameTrainer"
-          value={formTrainerName}
+          value={name}
           type="text"
           placeholder="Nombre de entrenador"
-          onChange={(e) => setFormTrainerName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           id="numberLifes"
-          value={formLives}
+          value={lives}
           type="number"
           placeholder="Cuantas vidas"
-          onChange={(e) => setFormLives(Number(e.target.value))}
+          onChange={(e) => setLives(Number(e.target.value))}
         />
         <select
           name="gameVersion"
-          value={formGameVersion}
-          onChange={(e) => setFormGameVersion(e.target.value)}
+          value={gameVersion}
+          onChange={(e) => setGameVersion(e.target.value)}
         >
           <option value="selectGame">Seleccionar juego</option>
-          <option value="brilliantDiamond">Diamante brillante</option>
-          <option value="shiningPearl">Perla reluciente</option>
-          <option value="violet">Púrpura</option>
-          <option value="scarlet">Escarlata</option>
+          <option value="rubySapphire">Rubí y Zafiro</option>
+          <option value="diamondPearl">Diamante y Perla</option>
+          <option value="xY">Pokemon XY</option>
+          <option value="violetScarlet">Púrpura y Escarlata</option>
         </select>
-        <button onClick={saveToLocalStorage}>Crear</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
+          Crear
+        </button>
       </div>
     </div>
   );
