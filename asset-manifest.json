@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/app_nuzlocke_tracker/static/css/main.d1f778db.css",
+    "main.css": "/app_nuzlocke_tracker/static/css/main.32604921.css",
     "main.js": "/app_nuzlocke_tracker/static/js/main.a22f68c9.js",
     "static/js/488.0a193fb0.chunk.js": "/app_nuzlocke_tracker/static/js/488.0a193fb0.chunk.js",
     "index.html": "/app_nuzlocke_tracker/index.html",
-    "main.d1f778db.css.map": "/app_nuzlocke_tracker/static/css/main.d1f778db.css.map",
+    "main.32604921.css.map": "/app_nuzlocke_tracker/static/css/main.32604921.css.map",
     "main.a22f68c9.js.map": "/app_nuzlocke_tracker/static/js/main.a22f68c9.js.map",
     "488.0a193fb0.chunk.js.map": "/app_nuzlocke_tracker/static/js/488.0a193fb0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1f778db.css",
+    "static/css/main.32604921.css",
     "static/js/main.a22f68c9.js"
   ]
 }
