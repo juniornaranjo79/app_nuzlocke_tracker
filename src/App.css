@@ -142,7 +142,7 @@ button:disabled {
 
 .gridPokemons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   justify-items: center;
 }
@@ -321,5 +321,11 @@ button:disabled {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+  .gridPokemons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
   }
 }
